@@ -113,7 +113,7 @@
     </button>
     <!-- Modal -->
 
-    <div class="modal" id="LogInModal" tabindex="-1" aria-labelledby="LogInModalLabel" aria-hidden="true">
+    <div class="modal fade" id="LogInModal" tabindex="-1" aria-labelledby="LogInModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -293,6 +293,9 @@
   <script>
     function myFunction(n) {
       alert("Your Fees= " + n);
+      $('#LogInModal').on('shown.bs.modal', function () {
+  $('#LogInInput').trigger('focus')
+})
     }
   </script>
 
